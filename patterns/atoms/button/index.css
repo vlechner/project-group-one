@@ -1,0 +1,15 @@
+.button {
+  padding: 3px 7px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: rgba(175, 47, 47, 0.1);
+}
+
+.button--active {
+  border-color: rgba(175, 47, 47, 0.2);
+}
