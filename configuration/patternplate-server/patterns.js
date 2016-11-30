@@ -1,15 +1,21 @@
-'use strict';
-
 module.exports = {
 	formats: {
 		css: {
+			name: 'Style',
 			transforms: ['postcss']
 		},
 		jsx: {
-			transforms: ['react', 'babel', 'react-to-markup']
+			name: 'Component',
+			transforms: ['babel', 'react-to-markup']
 		},
 		md: {
+			name: 'Documentation',
 			transforms: []
 		}
+	},
+	mount: {
+		format: 'jsx',
+		name: 'Component',
+		transforms: ['babel', 'react-mount', 'browserify']
 	}
 };

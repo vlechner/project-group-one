@@ -1,13 +1,22 @@
 'use strict';
 
 module.exports = {
-  'babel': {
-    inFormat: 'js',
-    outFormat: 'js',
-    opts: {
-      plugins: ['transform-object-rest-spread'],
-      presets: ['es2015', 'react']
-    }
+	'babel': {
+		inFormat: 'js',
+		outFormat: 'js',
+		opts: {
+			presets: ['es2015', 'react'],
+			plugins: ['transform-object-rest-spread']
+		}
+	},
+	'browserify': {
+		inFormat: 'js',
+		outFormat: 'js',
+		vendors: ['react', 'react-dom']
+	},
+  postcss: {
+    inFormat: 'css',
+    outFormat: 'css',
   },
 	'react': {
 		inFormat: 'jsx',
@@ -19,12 +28,9 @@ module.exports = {
 	},
 	'react-to-markup': {
 		inFormat: 'js',
-		outFormat: 'html'
-	},
-	'postcss': {
-		inFormat: 'css',
-		outFormat: 'css',
-		plugins: {},
-		opts: {}
+		outFormat: 'html',
+		opts: {
+			automount: true
+		}
 	}
 };
